@@ -1,5 +1,6 @@
-let cacheName			= "localWeatherPWA-v1";
-let weatherCacheName	= "weatherData-v1";
+let cacheName			= "localWeatherPWA-v2";
+let weatherCacheName	= "weatherData-v2";
+let pathName			= "weather-data";
 let appShellCache		= [
 	"/",
 	"/index.html",
@@ -42,7 +43,7 @@ self.addEventListener('fetch', function(e) {
 		e.respondWith(
 			caches.open(weatherCacheName).then(function(cache) {
 				return fetch(e.request).then(function(response){
-					cache.put("weather-data", response.clone());
+					cache.put(pathName, response.clone());
 					return response;
 				});
 			})

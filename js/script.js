@@ -1,20 +1,27 @@
 $(document).ready(function() {
     updateWeather();
-    var myFunc = setInterval(function() { updateWeather(); }, 300000);
+    var myFunc = setInterval(updateWeather, 300000);
 
     function updateWeather () {
+		var pathName	= "weather-data";
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                console.log("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
                 var url = "https://fcc-weather-api.glitch.me/api/current?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
-                console.log(url);
+
+				// Show old cache data, then get new data
+				if ('caches' in window) {
+					caches.match(pathName).then(function(response) {
+						if (response) {
+							response.json().then(function updateFromCache(json) {
+								updateWeatherView(json);
+							});
+						}
+					});
+				}
 
                 $.getJSON(url, function(json_ini) {
-                    $("#location-user").html(json_ini.name + ", " + json_ini.sys.country);
-                    $("#temperature-value-user").html(json_ini.main.temp);
-                    $("#temperature-unit-change-user").html("C");
-                    $("#weather-user").html(json_ini.weather[0].main);
-                    $("#weather-img").attr("src", json_ini.weather[0].icon);
+					updateWeatherView(json_ini);
                 });
             });
         }
@@ -35,5 +42,14 @@ $(document).ready(function() {
             $("#temperature-unit-change-user").html("C");
         }
     });
+
+	function updateWeatherView (json_ini) {
+		console.log(json_ini);
+		$("#location-user").html(json_ini.name + ", " + json_ini.sys.country);
+		$("#temperature-value-user").html(json_ini.main.temp);
+		$("#temperature-unit-change-user").html("C");
+		$("#weather-user").html(json_ini.weather[0].main);
+		$("#weather-img").attr("src", json_ini.weather[0].icon);
+	}
 
 });
