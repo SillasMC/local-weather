@@ -1,41 +1,43 @@
-body{
-    background-color:           #093015;
-}
+.txt-alig, .main-div, .code-author {
+  text-align: center; }
+
+body {
+  background-color: #093015; }
+
 .main-div {
-    text-align:     center;
-    font-family:    'Dosis', sans-serif;
-    color:          #bebebe;
-}
-.temp-row{
-    margin-top:     30px;
-    padding:        50px;
-    font-size:      4em;
-}
-.weather-row{
-    margin-top:     30px;
-    font-size:      0.6em;
-}
-.temperature-value{
-    text-align:     right;
-    float:          right;
-}
-.temperature-unity{
-    text-align: left;
-    float:      left;
-}
-.code-author{
-    text-align:     center;
-    margin-top:     15px;
-    font-family:    "Times New Roman", Times, serif;
-    font-size:      1em;
-}
-.col-no-padding{
-    margin:         0;
-    padding:        0;
-    padding-left:   7px;
-}
-.img-weather-center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+  font-family: 'Dosis', sans-serif;
+  color: #bebebe; }
+
+.temp-row {
+  margin-top: 30px;
+  padding: 50px;
+  font-size: 4em; }
+
+.weather-row {
+  margin-top: 30px;
+  font-size: 0.6060606061em; }
+
+.temperature-value {
+  text-align: right;
+  float: right; }
+
+.temperature-unity {
+  text-align: left;
+  float: left; }
+
+.code-author {
+  margin-top: 15px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1em; }
+
+.col-no-padding {
+  margin: 0;
+  padding: 0;
+  padding-left: 7px; }
+
+.img-weather-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=styles.css.map */

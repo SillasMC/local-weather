@@ -1,0 +1,47 @@
+$margin-default: 30px;
+$main-font: 4em;
+
+@mixin txt-alg_float($direction) {
+	text-align:     $direction;
+	float:          $direction;
+}
+
+.txt-alig {
+	text-align:     center;
+}
+
+body{
+	background-color:           #093015;
+}
+.main-div {
+	@extend 		.txt-alig;
+	font-family:    'Dosis', sans-serif;
+	color:          #bebebe;
+}
+.temp-row{
+	margin-top:     $margin-default;
+	padding:        50px;
+	font-size:      $main-font;
+}
+.weather-row{
+	margin-top:     $margin-default;
+	font-size:      $main-font / 6.6;
+}
+.temperature-value { @include txt-alg_float(right); }
+.temperature-unity { @include txt-alg_float(left); }
+.code-author{
+	@extend 		.txt-alig;
+	margin-top:     $margin-default / 2;
+	font-family:    "Times New Roman", Times, serif;
+	font-size:      $main-font / 4;
+}
+.col-no-padding{
+	margin:         0;
+	padding:        0;
+	padding-left:   7px;
+}
+.img-weather-center{
+	display:		block;
+	margin-left:	auto;
+	margin-right:	auto;
+}

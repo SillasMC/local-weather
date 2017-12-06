@@ -44,7 +44,6 @@ $(document).ready(function() {
     });
 
 	function updateWeatherView (json_ini) {
-		console.log(json_ini);
 		$("#location-user").html(json_ini.name + ", " + json_ini.sys.country);
 		$("#temperature-value-user").html(json_ini.main.temp);
 		$("#temperature-unit-change-user").html("C");
