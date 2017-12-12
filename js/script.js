@@ -22,6 +22,17 @@ $(document).ready(function() {
 
                 $.getJSON(url, function(json_ini) {
 					updateWeatherView(json_ini);
+
+					var options = {
+						body:		'Temperature in ' + json_ini.name + ' is ' + json_ini.main.temp + '!',
+						icon:		json_ini.weather[0].icon,
+						vibrate:	[100, 50, 100],
+						data:		{
+							dateOfArrival:	Date.now(),
+							primaryKey:		1
+						}
+					};
+					displayNotification('Local Weather App', options);
                 });
             });
         }
@@ -51,4 +62,11 @@ $(document).ready(function() {
 		$("#weather-img").attr("src", json_ini.weather[0].icon);
 	}
 
+	function displayNotification (title, options) {
+		if (Notification.permission == 'granted') {
+			navigator.serviceWorker.getRegistration().then(function(reg) {
+				reg.showNotification(title, options);
+			});
+		}
+	}
 });
