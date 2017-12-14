@@ -1,6 +1,8 @@
 $(document).ready(function() {
+
+	const TIME_INTERVAL = 300000;
     updateWeather();
-    var myFunc = setInterval(updateWeather, 300000);
+	var myFunc = setInterval(updateWeather, TIME_INTERVAL);
 
     function updateWeather () {
 		var pathName	= "weather-data";
@@ -44,19 +46,19 @@ $(document).ready(function() {
     $("#temperature-unit-change-user").on("click", function(){
         if ($("#temperature-unit-change-user").text() === "C") {
             var far = ($("#temperature-value-user").text() * 9/5) + 32;
-            $("#temperature-value-user").html(far);
+			$("#temperature-value-user").html(round(far));
             $("#temperature-unit-change-user").html("F");
         }
         else {
             var cel = ($("#temperature-value-user").text() - 32) * 5/9;
-            $("#temperature-value-user").html(cel);
+			$("#temperature-value-user").html(round(cel));
             $("#temperature-unit-change-user").html("C");
         }
     });
 
 	function updateWeatherView (json_ini) {
 		$("#location-user").html(json_ini.name + ", " + json_ini.sys.country);
-		$("#temperature-value-user").html(json_ini.main.temp);
+		$("#temperature-value-user").html(round(json_ini.main.temp));
 		$("#temperature-unit-change-user").html("C");
 		$("#weather-user").html(json_ini.weather[0].main);
 		$("#weather-img").attr("src", json_ini.weather[0].icon);
@@ -68,5 +70,9 @@ $(document).ready(function() {
 				reg.showNotification(title, options);
 			});
 		}
+	}
+
+	function round(value) {
+		return Number(Math.round(value+'e1')+'e-1');
 	}
 });

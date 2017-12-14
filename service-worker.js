@@ -4,7 +4,6 @@ let pathName			= "weather-data";
 let appShellCache		= [
 	"/",
 	"/index.html",
-	"/404.html",
 	"/js/script.js",
 	"/js/register.js",
 	"/js/permissions.js",
