@@ -8,7 +8,7 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 		<link rel="stylesheet" href="css/styles.css">
 
 		<!-- JS -->
@@ -24,6 +24,25 @@
 	<body>
 		<!-- Div with the full content-->
 		<div class="container-fluid main-div">
+
+			<!-- Nav bar -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<!-- Nav itens on the left -->
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Weather</a>
+					</div>
+
+					<!-- Nav itens on the right-->
+					<div class="nav navbar-nav navbar-right">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="javascript:" id="refresh-btn-id"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 
 			<!-- Temp row -->
 			<div class="row temp-row">

@@ -1,5 +1,6 @@
-$margin-default: 30px;
-$main-font: 4em;
+$margin-default: 20px;
+$main-font: 550%;
+$font-basic: 'Noto Serif', serif;
 
 @mixin txt-alg_float($direction) {
 	text-align:     $direction;
@@ -15,7 +16,7 @@ body{
 }
 .main-div {
 	@extend 		.txt-alig;
-	font-family:    'Dosis', sans-serif;
+	font-family:    $font-basic;
 	color:          #bebebe;
 }
 .temp-row{
@@ -24,14 +25,14 @@ body{
 	font-size:      $main-font;
 }
 .weather-row{
-	margin-top:     $margin-default;
-	font-size:      $main-font / 6.6;
+	margin-top:     $margin-default * 2;
+	font-size:      $main-font / 6.5;
 }
 .temperature-value { @include txt-alg_float(right); }
 .temperature-unity { @include txt-alg_float(left); }
 .code-author{
 	@extend 		.txt-alig;
-	margin-top:     $margin-default / 2;
+	margin-top:     $margin-default;
 	font-family:    "Times New Roman", Times, serif;
 	font-size:      $main-font / 4;
 }

@@ -5,17 +5,17 @@ body {
   background-color: #093015; }
 
 .main-div {
-  font-family: 'Dosis', sans-serif;
+  font-family: "Noto Serif", serif;
   color: #bebebe; }
 
 .temp-row {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 50px;
-  font-size: 4em; }
+  font-size: 550%; }
 
 .weather-row {
-  margin-top: 30px;
-  font-size: 0.6060606061em; }
+  margin-top: 40px;
+  font-size: 84.6153846154%; }
 
 .temperature-value {
   text-align: right;
@@ -26,9 +26,9 @@ body {
   float: left; }
 
 .code-author {
-  margin-top: 15px;
+  margin-top: 20px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1em; }
+  font-size: 137.5%; }
 
 .col-no-padding {
   margin: 0;
@@ -39,5 +39,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.navbar-color {
+  background-color: #3fa45e; }
 
 /*# sourceMappingURL=styles.css.map */

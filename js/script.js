@@ -56,6 +56,10 @@ $(document).ready(function() {
         }
     });
 
+	$("#refresh-btn-id").on("click", function () {
+		updateWeather();
+	});
+
 	function updateWeatherView (json_ini) {
 		$("#location-user").html(json_ini.name + ", " + json_ini.sys.country);
 		$("#temperature-value-user").html(round(json_ini.main.temp));
