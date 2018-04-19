@@ -1,10 +1,22 @@
 $margin-default: 20px;
-$main-font: 550%;
+$main-font: 4em;
 $font-basic: 'Noto Serif', serif;
 
 @mixin txt-alg_float($direction) {
 	text-align:     $direction;
 	float:          $direction;
+}
+
+@media (max-width: 450px) {
+	.navbar {
+		display: none;
+	}
+
+	.temp-row{
+		margin-top: $margin-default;
+		padding: 20px 10px !important;
+		font-size: $main-font;
+	}
 }
 
 .txt-alig {
@@ -25,14 +37,14 @@ body{
 	font-size:      $main-font;
 }
 .weather-row{
-	margin-top:     $margin-default * 2;
-	font-size:      $main-font / 6.5;
+	margin-top:     $margin-default;
+	font-size:      $main-font / 6.6;
 }
 .temperature-value { @include txt-alg_float(right); }
 .temperature-unity { @include txt-alg_float(left); }
 .code-author{
 	@extend 		.txt-alig;
-	margin-top:     $margin-default;
+	margin-top:     $margin-default / 2;
 	font-family:    "Times New Roman", Times, serif;
 	font-size:      $main-font / 4;
 }

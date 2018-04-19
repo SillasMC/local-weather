@@ -1,3 +1,11 @@
+@media (max-width: 450px) {
+  .navbar {
+    display: none; }
+
+  .temp-row {
+    margin-top: 20px;
+    padding: 20px 10px !important;
+    font-size: 4em; } }
 .txt-alig, .main-div, .code-author {
   text-align: center; }
 
@@ -11,11 +19,11 @@ body {
 .temp-row {
   margin-top: 20px;
   padding: 50px;
-  font-size: 550%; }
+  font-size: 4em; }
 
 .weather-row {
-  margin-top: 40px;
-  font-size: 84.6153846154%; }
+  margin-top: 20px;
+  font-size: 0.6060606061em; }
 
 .temperature-value {
   text-align: right;
@@ -26,9 +34,9 @@ body {
   float: left; }
 
 .code-author {
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 137.5%; }
+  font-size: 1em; }
 
 .col-no-padding {
   margin: 0;
@@ -39,8 +47,5 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto; }
-
-.navbar-color {
-  background-color: #3fa45e; }
 
 /*# sourceMappingURL=styles.css.map */

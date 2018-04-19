@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	const TIME_INTERVAL = 300000;
+	const TIME_INTERVAL = 900000;
     updateWeather();
 	var myFunc = setInterval(updateWeather, TIME_INTERVAL);
 

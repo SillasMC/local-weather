@@ -1,5 +1,5 @@
-let cacheName			= "localWeatherPWA-v3";
-let weatherCacheName	= "weatherData-v3";
+let cacheName			= "localWeatherPWA-v8";
+let weatherCacheName	= "weatherData-v8";
 let pathName			= "weather-data";
 let appShellCache		= [
 	"/",
