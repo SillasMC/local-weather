@@ -3,6 +3,9 @@
 .sass-cache/*
 *.css.map
 
+# Webpack
+dist/bundle.js
+
 # Firebase
 firebase.json
 .firebaserc

@@ -1,3 +1,5 @@
+var $ = require("jquery");
+
 $(document).ready(function() {
 
 	const TIME_INTERVAL = 900000;
